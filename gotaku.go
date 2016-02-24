@@ -52,7 +52,6 @@ func Take(target string) (string, error) {
 
 // List GYOTAKU URLs of target url
 func List(target string) ([]string, error) {
-	fmt.Println("Listing...")
 	v := url.Values{}
 	v.Set("url", target)
 	doc, err := goquery.NewDocument(host + "/?" + v.Encode())
